@@ -48,7 +48,11 @@ body {
 
 .keypad .clr-btn {
     width: 8.5rem;
-    background-color: lightgrey ;
+    background-color: rgb(255, 127, 127) ;
+}
+
+.keypad .clr-btn:hover {
+    background-color: rgb(255, 53, 53);
 }
 
 .keypad .equal-btn {
@@ -56,7 +60,7 @@ body {
 }
 
 .keypad .equal-btn:hover {
-    background-color: green ;
+    background-color: rgb(50, 192, 50) ;
 }
 
 .keypad .zero {
