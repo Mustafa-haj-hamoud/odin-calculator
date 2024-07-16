@@ -22,7 +22,7 @@ function operate(num1, num2, oper) {
     if (oper === "/" && num2 === 0) return "0 DIVISION ERROR";
     if ( !(["+", "-", "*", "/"].find((op) => op === oper )) ) return "INVALID OPERATOR";
     
-    operator = ""; // this line will help later for defining first and second numbers for operations
+    //operator = ""; // this line will help later for defining first and second numbers for operations
     if (oper === "+") return num1 + num2;
     if (oper === "-") return num1 - num2; 
     if (oper === "*") return num1 * num2;

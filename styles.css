@@ -1,7 +1,54 @@
 body {
+    background-color: darkgray;
+    display:flex;
+    justify-content: center;
+    user-select: none;
+    min-height: 90vh;
+    align-items: center;
+}
+
+
+
+.display{
+    background-color: lightgray;
+    font-family: Orbitron;
+    font-size: xxx-large;
+    padding: 0.5rem 1rem ;
+    border-radius: 1rem;
+    margin: 0.25rem;
+    box-sizing: border-box;
+    max-width: 17.5rem;
+    word-wrap: break-word;
+}
+
+.row{
+    display: flex;
+    flex: 1 1 0;
+}
+
+.keypad button {
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    width: 4rem;
+    height: 4rem;
+    margin: 0.25rem;
+    border-radius: 1rem;
+    border-style: none;
+}
+
+.keypad button:hover{
     background-color: gray;
 }
 
+.keypad .clr-btn {
+    width: 8.5rem;
+    height: 4rem;
+    background-color: lightgrey ;
+}
+
+
+
 .selected {
-    background-color: red;
+    background-color: lightgreen;
 }
