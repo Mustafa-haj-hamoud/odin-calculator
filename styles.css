@@ -52,12 +52,15 @@ body {
 }
 
 .keypad .equal-btn {
-    width: 8.5rem;
     background-color: lightgreen ;
 }
 
 .keypad .equal-btn:hover {
     background-color: green ;
+}
+
+.keypad .zero {
+    width: 8.5rem;
 }
 
 .selected {
