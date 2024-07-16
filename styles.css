@@ -7,6 +7,11 @@ body {
     align-items: center;
 }
 
+.container{
+    padding: 1rem;
+    border-radius: 2rem;
+    background-color: rgb(92, 92, 92);
+}
 
 
 .display{
@@ -28,7 +33,7 @@ body {
 
 .keypad button {
     text-align: center;
-    font-size: large;
+    font-size: x-large;
     font-weight: bold;
     width: 4rem;
     height: 4rem;
@@ -43,12 +48,18 @@ body {
 
 .keypad .clr-btn {
     width: 8.5rem;
-    height: 4rem;
     background-color: lightgrey ;
 }
 
+.keypad .equal-btn {
+    width: 8.5rem;
+    background-color: lightgreen ;
+}
 
+.keypad .equal-btn:hover {
+    background-color: green ;
+}
 
 .selected {
-    background-color: lightgreen;
+    background-color: rgb(252, 201, 157);
 }
