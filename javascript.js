@@ -143,14 +143,15 @@ document.querySelector(".del-btn").addEventListener("click", () => {
     display.textContent = displayText;
 });
 
-//this part provides keyboard support
+// Add keyboard support
 document.addEventListener("keyup",(event)=>{
     let numKeyFound = Array.from(numButtons).find((numButton)=> numButton.id === event.key) ;
     let operKeyFound = Array.from(operatorButtons).find((operButton)=> operButton.id === event.key);
     let delKeyFound = (event.key === "Backspace") ? document.getElementById("Backspace") : undefined;
     let equalKeyFound = (event.key === "Enter") ? document.getElementById("=") : undefined;
+    let dotKeyFound = (event.key === ".") ? document.getElementById(".") : undefined;
 
-    let keyFound = numKeyFound || operKeyFound || delKeyFound || equalKeyFound;
+    let keyFound = numKeyFound || operKeyFound || delKeyFound || equalKeyFound || dotKeyFound;
 
     if (keyFound){
         keyFound.click();
