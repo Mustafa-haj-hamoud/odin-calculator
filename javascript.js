@@ -19,7 +19,7 @@ function operate(num1, num2, oper) {
     if (num1 === "" || num2 === "") return "PROVIDE BOTH NUMBERS";
     if (!(typeof num1 === "number")) return "INVALID NUMBER 1";
     if (!(typeof num2 === "number")) return "INVALID NUMBER 2";
-    if (oper === "/" && num2 === 0) return "0 DIVISION ERROR";
+    if (oper === "/" && num2 === 0) return "0 DIVISION";
     if ( !(["+", "-", "*", "/"].find((op) => op === oper )) ) return "INVALID OPERATOR";
     
     //operator = ""; // this line will help later for defining first and second numbers for operations
@@ -47,10 +47,10 @@ numButtons.forEach( (button) => {
     button.addEventListener("click", ()=> {
         awaitUserInput = false;
         if (firstInput){
-            display.textContent = button.value;  
+            display.textContent = button.id;  
             firstInput = false;
         } else {
-            display.textContent += button.value;  
+            display.textContent += button.id;  
         }
 
         //choose which number to update in memory
@@ -143,3 +143,16 @@ document.querySelector(".del-btn").addEventListener("click", () => {
     display.textContent = displayText;
 });
 
+//this part provides keyboard support
+document.addEventListener("keyup",(event)=>{
+    let numKeyFound = Array.from(numButtons).find((numButton)=> numButton.id === event.key) ;
+    let operKeyFound = Array.from(operatorButtons).find((operButton)=> operButton.id === event.key);
+    let delKeyFound = (event.key === "Backspace") ? document.getElementById("Backspace") : undefined;
+    let equalKeyFound = (event.key === "Enter") ? document.getElementById("=") : undefined;
+
+    let keyFound = numKeyFound || operKeyFound || delKeyFound || equalKeyFound;
+
+    if (keyFound){
+        keyFound.click();
+    }
+});
